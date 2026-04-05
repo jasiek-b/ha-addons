@@ -1,0 +1,26 @@
+name: "CodeProject.AI Server (Local)"
+version: "2.6.14"
+slug: "codeproject_ai"
+description: "Lokalny serwer AI - Trwała baza danych"
+arch:
+  - aarch64
+startup: services
+boot: auto
+full_access: true
+
+map:
+  - type: addon_config
+    target: /config
+    read_only: false
+  - type: addon_config
+    target: /data
+    read_only: false
+
+options:
+  TZ: "Europe/Warsaw"
+
+schema:
+  TZ: str
+
+ports:
+  "32168/tcp": 32168
