@@ -1,6 +1,8 @@
 FROM codeproject/ai-server:arm64
 
 ENV TZ=Europe/Warsaw
-ENV DATA_DIR=/data
 
-EXPOSE 32168
+COPY run.sh /run.sh
+RUN chmod +x /run.sh
+
+CMD ["/run.sh"]
