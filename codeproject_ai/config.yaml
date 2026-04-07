@@ -1,6 +1,6 @@
 name: "CodeProject.AI Server"
 slug: codeproject_ai
-version: "2.6.14"
+version: "2.6.15"
 description: "Local CodeProject.AI server with persistent storage"
 url: "https://github.com/jasiek-b/ha-addons"
 
