@@ -1,6 +1,6 @@
 name: "CodeProject.AI Server"
 slug: codeproject_ai
-version: "2.6.19"
+version: "2.6.20"
 description: "Local CodeProject.AI server with persistent storage for Double-Take"
 url: "https://github.com/jasiek-b/ha-addons"
 
