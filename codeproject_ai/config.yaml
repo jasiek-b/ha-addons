@@ -1,6 +1,6 @@
 name: "CodeProject.AI Server"
 slug: codeproject_ai
-version: "2.6.15"
+version: "2.6.16"
 description: "Local CodeProject.AI server with persistent storage"
 url: "https://github.com/jasiek-b/ha-addons"
 
@@ -13,6 +13,9 @@ init: false
 
 map:
   - addon_config:rw
+
+environment:
+  DATA_DIR: /data
 
 ports:
   32168/tcp: 32168
