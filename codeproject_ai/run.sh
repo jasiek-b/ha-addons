@@ -1,10 +1,11 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/env bash
 set -e
 
-# Jeżeli /data nie jest jeszcze linkiem — zamień je na link do /config
+# Zamień /data na symlink do /config (trwały storage HA)
 if [ ! -L /data ]; then
   rm -rf /data
   ln -s /config /data
 fi
 
+# Uruchom oryginalny serwer CodeProject.AI
 exec /app/server/start.sh
