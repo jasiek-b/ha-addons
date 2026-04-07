@@ -1,6 +1,6 @@
 name: "CodeProject.AI Server"
 slug: codeproject_ai
-version: "2.6.17"
+version: "2.6.18"
 description: "Local CodeProject.AI server with persistent storage for Double-Take"
 url: "https://github.com/jasiek-b/ha-addons"
 
@@ -11,14 +11,16 @@ startup: services
 boot: auto
 init: false
 
-# JEDYNY trwały storage w add‑onach HA
+# Jedyny trwały storage dostępny w add-onach HA
+# /config w kontenerze = /addon_configs/<hash>_codeproject_ai na hoście
 map:
   - addon_config:rw
 
-# WYMUSZENIE katalogu danych CPAI
-# UWAGA: /config == /addon_configs/<hash>_codeproject_ai
+# Wymuszamy spójne miejsce zapisu danych CPAI
+# (faceembedding.db i options.json trafią do /config dzięki symlinkowi)
 environment:
   DATA_DIR: /config
+  TZ: Europe/Warsaw
 
 ports:
   32168/tcp: 32168
