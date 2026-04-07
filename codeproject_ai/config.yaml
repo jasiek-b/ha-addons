@@ -11,5 +11,8 @@ startup: services
 boot: auto
 init: false
 
+map:
+  - addon_config:rw
+
 ports:
   32168/tcp: 32168
