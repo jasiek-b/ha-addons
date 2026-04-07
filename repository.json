@@ -1,4 +1,4 @@
-{  "name": "My Local Addons",
-  "url": "http://homeassistant.local:8071/my_addons/",
-  "maintainer": "Local Admin"
+{  "name": "Jasiek's Addons",
+  "url": "https://github.com/jasiek-b/ha-addons",
+  "maintainer": "jasiek-b"
 }
