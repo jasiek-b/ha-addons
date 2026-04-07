@@ -1,26 +1,15 @@
-name: "CodeProject.AI Server (Local)"
+name: "CodeProject.AI Server"
+slug: codeproject_ai
 version: "2.6.14"
-slug: "codeproject_ai"
-description: "Lokalny serwer AI - Trwała baza danych"
+description: "Local CodeProject.AI server with persistent storage"
+url: "https://github.com/jasiek-b/ha-addons"
+
 arch:
   - aarch64
+
 startup: services
 boot: auto
-full_access: true
-
-map:
-  - type: addon_config
-    target: /config
-    read_only: false
-  - type: addon_config
-    target: /data
-    read_only: false
-
-options:
-  TZ: "Europe/Warsaw"
-
-schema:
-  TZ: str
+init: false
 
 ports:
-  "32168/tcp": 32168
+  32168/tcp: 32168
